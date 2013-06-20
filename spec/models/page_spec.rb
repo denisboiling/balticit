@@ -22,8 +22,8 @@ describe Page do
     end
 
     it 'should be unique' do
-      other_page = FactoryGirl.create :page, :slug => page.slug
-      other_page.should be_invalid
+      FactoryGirl.create :page, :slug => page.slug
+      page.should be_invalid
     end
   end
 
