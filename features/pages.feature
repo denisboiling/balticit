@@ -1,8 +1,8 @@
 Feature: Pages
 
   Scenario: Open page from root page
-    Given there is a page with the name "News" and the content "Hedgehogs always sober"
+    Given all standart pages
     When I am on the root page
     Then I should see "Главная"
-    And I follow "News"
-    Then I should see "Hedgehogs always sober"
+    And I follow "Контакты"
+    Then I should see "+7 4012 909 040"
