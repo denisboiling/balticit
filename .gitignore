@@ -33,4 +33,3 @@ pickle-email-*.html
 .project
 /nbproject/private/
 /nbproject
-/config/database.yml
