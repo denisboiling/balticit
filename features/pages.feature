@@ -1,8 +1,8 @@
 Feature: Pages
 
-  Scenario: Open page from root page
-    Given all standart pages
+  Background:
+    Given all base pages
+
+  Scenario: Visit each of base page
     When I am on the root page
-    Then I should see "Главная"
-    And I follow "Контакты"
-    Then I should see "+7 4012 909 040"
+    Then I should can visit each of base pages
