@@ -22,6 +22,7 @@ Gemfile.lock
 /.bundle
 /vendor/bundle
 /log/*
+**.log
 /tmp/*
 /public/uploads/*
 /db/*.sqlite3

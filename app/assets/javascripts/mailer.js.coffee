@@ -21,4 +21,3 @@ jQuery ->
     noty
       text: 'Произошла ошибка'
       type: 'error'
-
