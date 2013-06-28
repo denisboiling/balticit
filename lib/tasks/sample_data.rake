@@ -2,7 +2,9 @@
 namespace :db do
   desc "Fill database with sample data"
   task sample_data: :environment do
-    Page.find_by_slug('index').update_attributes(content:'
+    page = Page.find_by_slug('index')
+    page = Page.create! name: "Главная", slug: :index unless page
+    page.update_attributes(content:'
       <div class="span4 btop-first" id="btop-first">
         Разрабатываем прототип на основе вашей идеи, продумываем сценарии пользовательского взаимодействия и делаем удобный дизайн интерфейса для различных типов устройств.
       </div>
