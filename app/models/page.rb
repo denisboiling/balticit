@@ -12,7 +12,7 @@ class Page < ActiveRecord::Base
   scope :visible, -> { where(hidden: false) }
   scope :invisible, -> { where(hidden: true) }
   scope :without, (lambda do |field, values|
-    return unless field.to_s.in? attribute_names
+    raise "Unknown field :#{field} in Box model" unless field.to_s.in? attribute_names
     values = [values] unless values.is_a? Array
     where("#{field} NOT IN (?)", values)
   end)
