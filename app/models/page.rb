@@ -10,8 +10,9 @@ class Page < ActiveRecord::Base
 
   translates :content, :name
   accepts_nested_attributes_for :translations
+  validates :name, presence: true
 
-
+  # Зачем это здесь?
   class Translation
     validates :name, presence: true
   end

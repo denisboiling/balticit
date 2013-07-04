@@ -9,14 +9,14 @@ describe Page do
   end
 
   describe '#name' do
-    it "should be non-empty" do
+    it 'should not be empty' do
       page.name = ' '
       page.should be_invalid
     end
   end
 
   describe '#slug' do
-    it 'should be non-empty' do
+    it 'should not be empty' do
       page.slug = ' '
       page.should be_invalid
     end

@@ -15,7 +15,6 @@
 *.sassc
 .sass-cache
 capybara-*.html
-.rspec
 .rvmrc
 .DS_Store
 /.bundle
