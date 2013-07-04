@@ -1,7 +1,9 @@
-BalticIT website
+# Baltic IT Website
 
-Default database.yml:
-==============================
+## Деплой
+см. [DEPLOY.md](DEPLOY.md)
+
+## Default database.yml:
 development:
   adapter: mysql2
   encoding: utf8
@@ -25,4 +27,3 @@ production:
 
 cucumber:
   <<: *test
-==============================

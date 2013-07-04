@@ -10,14 +10,14 @@ Feature: Pages
     When I am on the page with slug "contacts"
     Then I fill in "feedback-email" with "<email>"
     And I fill in "feedback-message" with "<message>"
-    When I press "Отправить"
+    When I press "Send"
     Then I should see "<result>"
     Then "admin@example.com" should receive <got> email with subject "You have new feedback message"
   Examples:
-    | email               | message               | result                            | got |
-    | email@example.com   | Хочу у вас работать!  | Ваше сообщение успешно отправлено | an  |
-    | AMAZING+E.M.L@ml.ru | Хочу у вас работать!  | Ваше сообщение успешно отправлено | an  |
-    | bad'mail'bad@ml.com | Хочу у вас работать!  | Введите правильный e-mail         | no  |
-    | without.dog.mail.ru | Хочу у вас работать!  | Введите правильный e-mail         | no  |
-    | a@b@c@example.com   | Хочу у вас работать!  | Введите правильный e-mail         | no  |
-    | email@example.com   | Bad mes               | Ваше сообщение cлишком короткое   | no  |
+    | email               | message                         | result                    | got |
+    | email@example.com   | I want to work with you!        | Your message in sending!  | an  |
+    | AMAZING+E.M.L@ml.ru | I don't want to work with you!  | Your message in sending!  | an  |
+    | bad'mail'bad@ml.com | I don't want to work!           | Your e-mail in wrong      | no  |
+    | without.dog.mail.ru | Я танцую джигу-дрыгу на столе.. | Your e-mail in wrong      | no  |
+    | o@b@m@us.us         | Я Обама. А чего добился ты?     | Your e-mail in wrong      | no  |
+    | email@example.com   | I'm a man                       | Your message too short    | no  |

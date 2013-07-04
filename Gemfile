@@ -7,12 +7,17 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 
-gem 'activeadmin',   '~> 0.6.0'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'friendly_id'
 gem 'ckeditor'
 gem 'noty-rails'
+gem 'route_translator'
+gem 'i18n-js', :github => 'fnando/i18n-js'
+gem 'globalize3'
+gem 'ActiveAdmin-Globalize3-inputs'
+gem 'ancestry'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -34,6 +39,8 @@ gem 'russian'
 gem 'unicorn'
 gem 'whenever'
 gem 'exception_notification'
+
+gem 'roboto'
 
 group :test do
   gem 'rspec-rails'
@@ -60,7 +67,8 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
   gem 'capistrano-unicorn'
-  gem 'rvm-capistrano'
+  gem 'rvm-capistrano', github: 'wayneeseguin/rvm-capistrano'
+  gem 'capistrano-helpers'
 
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -72,7 +80,7 @@ group :development do
   gem 'pry-rails', require: false
   gem 'brakeman', require: false
   #refactoring
-  gem 'rails_best_practices', require: false
+  gem 'rails_best_practices', github: 'railsbp/rails_best_practices', require: false
 end
 
 group :development, :test do

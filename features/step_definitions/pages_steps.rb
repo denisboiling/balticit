@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 Then /^(?:|I )should can visit each of base pages$/ do
   # Should be screened out by parent_id later
   base_pages = Page.visible.without(:slug, :index)
@@ -7,6 +5,6 @@ Then /^(?:|I )should can visit each of base pages$/ do
     step %Q(I follow "#{base_page.name}")
     current_path.sub('/', '').should == base_page.slug
     # Confirm that the page will display
-    step %Q(I should see "Главная")
+    step %Q(I should see "Projects")
   end
 end
