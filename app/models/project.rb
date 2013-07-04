@@ -8,7 +8,9 @@ class Project < ActiveRecord::Base
   attr_accessible :translations_attributes, :translations
   translates :content, :name, :intro
   accepts_nested_attributes_for :translations
+  validates :name, presence: true
 
+  # Зачем это здесь (2)?
   class Translation
     validates :name, presence: true
   end
